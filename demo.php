@@ -17,7 +17,7 @@ $TestData = ['q','w','e','r','t','y','u','i','o','p','a','s','d','f',
 			 'g','h','j','k','l','z','x','c','v','b','n','m','0','1',
 			 '2','3','4','5','6','7','8','9','林','灿','斌','编','写',
 			 '于','二','零','一','五','年','四','月','三','十','日'];
-if(!empty($_POST['char'])){
+if(isset($_POST['char']) && $_POST['char'] != null){
 	$Char = $_POST['char'];
 }else{
 	$Char = $TestData[mt_rand(0,count($TestData)-1)];

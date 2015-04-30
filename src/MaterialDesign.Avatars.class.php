@@ -419,7 +419,7 @@ class MDAvtars
 			$AvatarSize = $this->AvatarSize;
 		}
 		header ('Content-Type: image/png');
-		imagepng($this->Resize($AvatarSize));
+		return imagepng($this->Resize($AvatarSize));
 	}
 
 	public function Save($Path, $AvatarSize=0)
@@ -427,6 +427,6 @@ class MDAvtars
 		if(!$AvatarSize){
 			$AvatarSize = $this->AvatarSize;
 		}
-		imagepng($this->Resize($AvatarSize), $Path);
+		return imagepng($this->Resize($AvatarSize), $Path);
 	}
 }
