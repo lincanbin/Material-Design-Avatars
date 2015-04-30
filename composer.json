@@ -1,0 +1,19 @@
+{
+    "name": "lincanbin/Material-Design-Avatars",
+    "keywords": [
+        "avatar",
+        "material design",
+        "templating"
+    ],
+    "description": "Create material deisgn avatars for users just like Gmail or Messager in Android.",
+    "license": "Apache",
+    "authors": [
+        {
+            "name": "lincanbin",
+            "email": "lincanbin@hotmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=4.0.6"
+    }
+}
