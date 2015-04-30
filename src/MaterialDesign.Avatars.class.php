@@ -18,13 +18,60 @@ class MDAvtars
 	public $Padding;
 	public $Avatar;
 	public $FontFile;
+	public $IsNotletter;
+	public $LetterFont;
+	public $AsianFont;
+	public $EnableAsianChar;
+
 
 	function __construct($Char, $AvatarSize = 256, $Padding=30)
 	{
-		$this->Char = strtoupper($Char);
+		$this->Char = strtoupper(mb_substr($Char, 0, 1, "UTF-8"));
 		$this->AvatarSize = $AvatarSize;
 		$this->Padding = $Padding;
-		$this->FontFile = dirname(__FILE__) . '/' . 'fonts/SourceCodePro-Regular.ttf';
+		$this->LetterFont = dirname(__FILE__).'/fonts/SourceCodePro-Light.ttf';
+		$this->AsianFont = dirname(__FILE__).'/fonts/SourceHanSansCN-Normal.ttf';
+		$this->EnableAsianChar = is_file($this->AsianFont);
+
+		$CNChar=ord($this->Char);
+		if (!$this->EnableAsianChar && 
+			preg_match("/^[\x7f-\xff]/", $this->Char) && 
+			!($CNChar>=ord("A") && $CNChar<=ord("z"))
+		){
+		//如果是中文，并且没有中文字体包，则按拼音首字母对其进行转换
+			$CNByte = iconv("UTF-8","gb2312", $this->Char);
+			$Code=ord($CNByte{0}) * 256 + ord($CNByte{1}) - 65536;//求其偏移量
+			if($Code>=-20319 and $Code<=-20284) $this->Char = "A";
+			if($Code>=-20283 and $Code<=-19776) $this->Char = "B";
+			if($Code>=-19775 and $Code<=-19219) $this->Char = "C";
+			if($Code>=-19218 and $Code<=-18711) $this->Char = "D";
+			if($Code>=-18710 and $Code<=-18527) $this->Char = "E";
+			if($Code>=-18526 and $Code<=-18240) $this->Char = "F";
+			if($Code>=-18239 and $Code<=-17923) $this->Char = "G";
+			if($Code>=-17922 and $Code<=-17418) $this->Char = "H";
+			if($Code>=-17417 and $Code<=-16475) $this->Char = "J";
+			if($Code>=-16474 and $Code<=-16213) $this->Char = "K";
+			if($Code>=-16212 and $Code<=-15641) $this->Char = "L";
+			if($Code>=-15640 and $Code<=-15166) $this->Char = "M";
+			if($Code>=-15165 and $Code<=-14923) $this->Char = "N";
+			if($Code>=-14922 and $Code<=-14915) $this->Char = "O";
+			if($Code>=-14914 and $Code<=-14631) $this->Char = "P";
+			if($Code>=-14630 and $Code<=-14150) $this->Char = "Q";
+			if($Code>=-14149 and $Code<=-14091) $this->Char = "R";
+			if($Code>=-14090 and $Code<=-13319) $this->Char = "S";
+			if($Code>=-13318 and $Code<=-12839) $this->Char = "T";
+			if($Code>=-12838 and $Code<=-12557) $this->Char = "W";
+			if($Code>=-12556 and $Code<=-11848) $this->Char = "X";
+			if($Code>=-11847 and $Code<=-11056) $this->Char = "Y";
+			if($Code>=-11055 and $Code<=-10247) $this->Char = "Z";
+		}
+		if(in_array($this->Char, str_split('QWERTYUIOPASDFGHJKLZXCVBNM0123456789', 1))){
+			$this->IsNotletter = false;
+			$this->FontFile = $this->LetterFont;
+		}else{
+			$this->IsNotletter = true;
+			$this->FontFile = $this->AsianFont;
+		}
 		$this->Initialize();
 	}
 
@@ -34,7 +81,6 @@ class MDAvtars
 		$Width  = $this->AvatarSize;//Width of avatar
 		$Height = $this->AvatarSize;//Height of avatar
 		$Padding = $this->Padding;
-		$FontSize = $Width - $Padding * 2;
 		$this->Avatar = imagecreatetruecolor($Width, $Height);
 		//全透明背景
 		imageSaveAlpha($this->Avatar, true);
@@ -73,12 +119,22 @@ class MDAvtars
 		);
 		//字体
 		$FontColor = imagecolorallocate($this->Avatar, 255, 255, 255);
+		if($this->IsNotletter){
+			//中文字符偏移
+			$FontSize = $Width - $Padding * 3;
+			$X = $Padding + (-14.5/196)*$FontSize;
+			$Y = $Height - $Padding - (13/196)*$FontSize;
+		}else{
+			$FontSize = $Width - $Padding * 2;
+			$X = $Padding + (20/196)*$FontSize;
+			$Y = $Height - $Padding - (13/196)*$FontSize;
+		}
 		// 在圆正中央填入字符
 		imagettftext($this->Avatar, 
 					 $FontSize, 
 					 0, 
-					 $Padding + (20/196)*$FontSize, 
-					 $Height - $Padding - (13/196)*$FontSize, 
+					 $X, 
+					 $Y, 
 					 $FontColor, 
 					 $this->FontFile, 
 					 $this->Char
