@@ -3,6 +3,12 @@ Create material deisgn avatars for users just like Gmail or Messager in Android.
 
 [Online Demo](http://www.94cb.com/Material-Design-Avatars/)
 
+
+Screenshot
+------------
+![1430381668945092](https://cloud.githubusercontent.com/assets/5785188/7410189/2b6de268-ef5f-11e4-9499-96ae36383fa6.png)
+
+
 Initialize
 ------------
 ```php
