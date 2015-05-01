@@ -61,6 +61,19 @@ $Avatar->Free();
 ?>
 ```
 
+#### Notice
+If you do not need Chinese support, you can delete ```src/fonts/SourceHanSansCN-Normal.ttf```.
+
+When you input a Chinese character, it will automatically extract the first letter of the pinyin of the Chinese character instead of the original input if you deleted ```src/fonts/SourceHanSansCN-Normal.ttf```. 
+```php
+$Avatar = new MDAvtars('林', 512);//The pinyin of "林" is "Lin".
+```
+This will be the same as that below if you deleted ```src/fonts/SourceHanSansCN-Normal.ttf```. 
+```php
+$Avatar = new MDAvtars('L', 512);//The first letter of that pinyin is "Lin".
+```
+
+
 License
 ------------
 
