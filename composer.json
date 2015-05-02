@@ -6,7 +6,7 @@
         "templating"
     ],
     "description": "Create material deisgn avatars for users just like Gmail or Messager in Android.",
-    "license": "Apache",
+    "license": "Apache License, Version 2.0",
     "authors": [
         {
             "name": "lincanbin",
