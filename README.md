@@ -3,6 +3,16 @@ Create material deisgn avatars for users just like Gmail or Messager in Android.
 
 [Online Demo](http://www.94cb.com/Material-Design-Avatars/)
 
+Language Support
+------------
+![E](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=E&size=64)![N](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=N&size=64)![G](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=G&size=64)![L](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=L&size=64)![I](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=I&size=64)![S](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=S&size=64)![H](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=H&size=64)
+
+![J](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=%E7%AE%80&size=64)![T](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=%E4%BD%93&size=64)![Z](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=%E4%B8%AD&size=64)![W](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=%E6%96%87&size=64)
+
+![F](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=%E7%B9%81&size=64)![T](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=%E9%AB%94&size=64)![Z](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=%E4%B8%AD&size=64)![W](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=%E6%96%87&size=64)
+
+![R](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=%E3%81%AB&size=64)![I](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=%E3%81%BB&size=64)![Y](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=%E3%82%93&size=64)![U](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=%E3%81%94&size=64)
+
 
 Screenshot
 ------------
