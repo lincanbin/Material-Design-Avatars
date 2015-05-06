@@ -86,6 +86,12 @@ This will be the same as that below if you deleted ```src/fonts/SourceHanSansCN-
 $Avatar = new MDAvtars('L', 512);//The first letter of that pinyin is "Lin".
 ```
 
+Fonts
+------------
+[Source Code Pro](https://github.com/adobe-fonts/source-code-pro)
+
+[Source Han Sans](https://github.com/adobe-fonts/source-han-sans)
+
 
 License
 ------------
