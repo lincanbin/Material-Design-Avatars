@@ -25,16 +25,24 @@ if(isset($_POST['char']) && $_POST['char'] != null){
 ?>
 		<input name="char" type="text" value="<?php echo $Char; ?>" />
 	</p>
+	<p>Size: <input type="range" name="Size" min="16" max="512" value="<?php echo (isset($_POST['Size']) && intval($_POST['Size'])) ? intval($_POST['Size']):'128'; ?>" /></p>
 	<p>
 		&nbsp;&nbsp;<input type="submit" value="Generate" />
 	</p>
 	<hr />
 	<p>
 		<h3>Output:</h3>
-		<img src="avatar.php?char=<?php echo urlencode($Char); ?>&size=512">
-		<img src="avatar.php?char=<?php echo urlencode($Char); ?>&size=256">
-		<img src="avatar.php?char=<?php echo urlencode($Char); ?>&size=128">
-		<img src="avatar.php?char=<?php echo urlencode($Char); ?>&size=64">
-		<img src="avatar.php?char=<?php echo urlencode($Char); ?>&size=32">
+		<img src="avatar.php?char=<?php echo urlencode($Char); ?>&size=128&cache=<?php echo mt_rand(1,65536); ?>">
+		<img src="avatar.php?char=<?php echo urlencode($Char); ?>&size=64&cache=<?php echo mt_rand(1,65536); ?>">
+		<img src="avatar.php?char=<?php echo urlencode($Char); ?>&size=64&cache=<?php echo mt_rand(1,65536); ?>">
+		<img src="avatar.php?char=<?php echo urlencode($Char); ?>&size=64&cache=<?php echo mt_rand(1,65536); ?>">
+		<img src="avatar.php?char=<?php echo urlencode($Char); ?>&size=32&cache=<?php echo mt_rand(1,65536); ?>">
 	</p>
+<?php
+if(isset($_POST['Size']) && intval($_POST['Size'])) {
+?>
+<p><img src="avatar.php?char=<?php echo urlencode($Char); ?>&size=<?php echo intval($_POST['Size']); ?>&cache=<?php echo mt_rand(1,65536); ?>"></p>
+<?php
+}
+?>
 </form>
