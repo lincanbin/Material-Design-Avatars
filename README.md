@@ -1,5 +1,5 @@
 # Material-Design-Avatars
-Create material deisgn avatars for users just like Gmail or Messager in Android.
+Create material deisgn avatars for users just like Google Messager. 
 
 It may not be unique but looks better than Identicon or Gravatar.
 
@@ -19,8 +19,13 @@ Language Support
 
 Screenshot
 ------------
-![1430381668945092](https://cloud.githubusercontent.com/assets/5785188/7410189/2b6de268-ef5f-11e4-9499-96ae36383fa6.png)
+[Carbon Forum](http://www.94cb.com)
 
+![Carbon Forum](https://cloud.githubusercontent.com/assets/5785188/7410189/2b6de268-ef5f-11e4-9499-96ae36383fa6.png)
+
+[Android Client for Carbon Forum](https://github.com/lincanbin/Android-Carbon-Forum)
+
+![Android Client for Carbon Forum](https://cloud.githubusercontent.com/assets/5785188/7678142/4f96e512-fd84-11e4-8225-83020e8f3688.png)
 
 Initialize
 ------------
