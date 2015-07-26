@@ -8,7 +8,7 @@ It may not be unique but looks better than Identicon or Gravatar.
 
 Language Support
 ------------
-![E](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=E&size=64)![N](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=N&size=64)![G](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=G&size=64)![L](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=L&size=64&cache=none)![I](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=I&size=64)![S](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=S&size=64&cache=none)![H](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=H&size=64)
+![E](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=E&size=64&cache=none)![N](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=N&size=64)![G](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=G&size=64)![L](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=L&size=64&cache=none)![I](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=I&size=64)![S](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=S&size=64&cache=none)![H](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=H&size=64)
 
 ![J](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=%E7%AE%80&size=64&cache=none)![T](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=%E4%BD%93&size=64)![Z](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=%E4%B8%AD&size=64)![W](http://www.94cb.com/Material-Design-Avatars/avatar.php?char=%E6%96%87&size=64)
 
