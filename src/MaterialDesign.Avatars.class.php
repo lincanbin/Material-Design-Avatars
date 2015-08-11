@@ -83,6 +83,7 @@ class MDAvtars
 		$Padding = $this->Padding;
 		$this->Avatar = imagecreatetruecolor($Width, $Height);
 		//全透明背景
+		imagealphablending($this->Avatar, false);
 		imageSaveAlpha($this->Avatar, true);
 		$BackgroundAlpha = imagecolorallocatealpha($this->Avatar, 255, 255, 255, 127);
 		imagefill($this->Avatar, 0, 0, $BackgroundAlpha);
@@ -397,6 +398,7 @@ class MDAvtars
 				$TargetHeight = round($this->AvatarSize * $Percent);
 				$TargetImageData = imagecreatetruecolor($TargetWidth, $TargetHeight);
 				//全透明背景
+				imagealphablending($TargetImageData, false);
 				imageSaveAlpha($TargetImageData, true);
 				$BackgroundAlpha = imagecolorallocatealpha($TargetImageData, 255, 255, 255, 127);
 				imagefill($TargetImageData, 0, 0, $BackgroundAlpha);
