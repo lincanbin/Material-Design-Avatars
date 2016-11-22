@@ -12,11 +12,10 @@ $OutputSize = min(512, empty($_GET['size'])?36:intval($_GET['size']));
 //Demo start
 
 require(dirname(__FILE__) . "/src/MDAvatars.php");
-$Avatar = new MDAvatars($Char, 512);
-
 // composer
 // require(__DIR__ . "/vendor/autoload.php");
-// $Avatar = new Md\MDAvatars($Char, 512);
+
+$Avatar = new Md\MDAvatars($Char, 512);
 
 $Avatar->Output2Browser($OutputSize);
 $Avatar->Save('./avatars/Avatar256.png', 256);

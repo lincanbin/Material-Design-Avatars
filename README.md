@@ -42,7 +42,7 @@ require(dirname(__FILE__) . "/src/MDAvatars.php");
 'X'         : The character that you want to fill to the avatar.
 512 (pixel) : The size of the avatar.
 */
-$Avatar = new MDAvatars('X', 512);
+$Avatar = new Md\MDAvatars('X', 512);
 ?>
 ```
 
@@ -60,7 +60,7 @@ OR initialize with composer:
 <?php
 // composer 
 require(__DIR__ . "/vendor/autoload.php");
-use Md\MDAvatars;
+use MDAvatars;
 
 $Avatar = new MDAvatars('X', 512);
 ?>
