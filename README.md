@@ -1,4 +1,4 @@
-# Material-Design-Avatars
+# Material-Design-Avatars      [![Build Status](https://travis-ci.org/lincanbin/Material-Design-Avatars.svg?branch=master)](https://travis-ci.org/lincanbin/Material-Design-Avatars)
 Create material deisgn avatars for users just like Google Messager. 
 
 It may not be unique but looks better than Identicon or Gravatar.
