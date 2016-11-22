@@ -1,0 +1,27 @@
+language: php
+php:
+  - '5.2'
+  - '5.3.3'
+  - '5.4'
+  - '5.5'
+  - '5.6'
+  - '7.0'
+  - nightly
+#   - hhvm
+
+# matrix:
+#   allow_failures:
+#     - php: hhvm
+
+before_script:
+  - chmod 777 -R ./
+  - php -m
+  - cd avatars
+  - ls
+  - cd ../
+
+script:
+  - php -l src/MDAvatars.php
+  - php-cgi -f avatar.php char=a
+  - cd avatars
+  - ls

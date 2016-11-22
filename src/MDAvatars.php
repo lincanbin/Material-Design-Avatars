@@ -434,4 +434,17 @@ class MDAvatars
         }
         return imagepng($this->Resize($AvatarSize), $Path);
     }
+
+    // Alias
+    public function free(){
+        $this->Free();
+    }
+
+    public function output2Browser($avatarSize = 0){
+        $this->Output2Browser($avatarSize);
+    }
+
+    public function save($path, $avatarSize = 0){
+        $this->Save($path, $avatarSize);
+    }
 }
