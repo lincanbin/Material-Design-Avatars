@@ -53,13 +53,13 @@ OR initialize with composer:
 {
 	"require": {
 		"lincanbin/material-design-avatars": "*.*"
-	},
+	}
 }
 ```
 ```php
 <?php
 // composer 
-require 'vendor/autoload.php';
+require(__DIR__ . "/vendor/autoload.php");
 use Md\MDAvatars;
 
 $Avatar = new MDAvtars('X', 512);
