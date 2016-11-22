@@ -37,11 +37,31 @@ Initialize
 ------------
 ```php
 <?php
-require(dirname(__FILE__) . "/src/MaterialDesign.Avatars.class.php");
+require(dirname(__FILE__) . "/src/MDAvatars.php");
 /*
 'X'         : The character that you want to fill to the avatar.
 512 (pixel) : The size of the avatar.
 */
+$Avatar = new MDAvtars('X', 512);
+?>
+```
+
+OR initialize with composer: 
+
+
+```json
+{
+	"require": {
+		"lincanbin/material-design-avatars": "*.*"
+	},
+}
+```
+```php
+<?php
+// composer 
+require 'vendor/autoload.php';
+use Md\MDAvatars;
+
 $Avatar = new MDAvtars('X', 512);
 ?>
 ```

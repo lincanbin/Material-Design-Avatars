@@ -10,7 +10,7 @@ if(isset($_GET['char']) && $_GET['char'] != null ){
 }
 $OutputSize = min(512, empty($_GET['size'])?36:intval($_GET['size']));
 //Demo start
-require(dirname(__FILE__) . "/src/MaterialDesign.Avatars.class.php");
+require(dirname(__FILE__) . "/src/MDAvatars.php");
 
 $Avatar = new MDAvtars($Char, 512);
 $Avatar->Output2Browser($OutputSize);
