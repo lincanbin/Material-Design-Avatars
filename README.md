@@ -46,7 +46,7 @@ $Avatar = new Md\MDAvatars('X', 512);
 ?>
 ```
 
-OR initialize with composer: 
+Or initialize with composer: 
 
 
 ```json
@@ -60,7 +60,7 @@ OR initialize with composer:
 <?php
 // composer 
 require(__DIR__ . "/vendor/autoload.php");
-use MDAvatars;
+use Md\MDAvatars;
 
 $Avatar = new MDAvatars('X', 512);
 ?>
