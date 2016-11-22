@@ -12,7 +12,7 @@ $OutputSize = min(512, empty($_GET['size'])?36:intval($_GET['size']));
 //Demo start
 
 require(dirname(__FILE__) . "/src/MDAvatars.php");
-$Avatar = new MDAvtars($Char, 512);
+$Avatar = new MDAvatars($Char, 512);
 
 // composer
 // require(__DIR__ . "/vendor/autoload.php");
