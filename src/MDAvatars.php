@@ -29,7 +29,7 @@ class MDAvatars
 
     function __construct($Char, $AvatarSize = 256)
     {
-        $this->Char            = strtoupper(mb_substr($Char, 0, 1, "UTF-8"));
+        $this->Char            = mb_strtoupper(mb_substr($Char, 0, 1, "UTF-8"));
         $this->AvatarSize      = $AvatarSize;
         $this->Padding         = 30 * ($this->AvatarSize / 256);
         $this->LetterFont      = dirname(__FILE__) . '/fonts/SourceCodePro-Light.ttf';
@@ -428,11 +428,11 @@ class MDAvatars
     }
 
     /**
-     * Output binary image data
+     * Get image resource identifier
      * @param int $AvatarSize
      * @return resource
      */
-    public function Output2Binary($AvatarSize = 0)
+    public function Output2ImageResource($AvatarSize = 0)
     {
         if (!$AvatarSize) {
             $AvatarSize = $this->AvatarSize;
@@ -450,7 +450,13 @@ class MDAvatars
         if (!$AvatarSize) {
             $AvatarSize = $this->AvatarSize;
         }
-        return 'data:image/png;base64,' . base64_encode($this->Resize($AvatarSize));
+
+        ob_start();
+        imagepng($this->Resize($AvatarSize));
+        $content = ob_get_contents();
+        ob_end_clean();
+
+        return 'data:image/png;base64,' . base64_encode($content);
     }
 
     public function Save($Path, $AvatarSize = 0)
