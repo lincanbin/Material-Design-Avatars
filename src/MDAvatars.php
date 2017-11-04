@@ -450,7 +450,13 @@ class MDAvatars
         if (!$AvatarSize) {
             $AvatarSize = $this->AvatarSize;
         }
-        return 'data:image/png;base64,' . base64_encode($this->Resize($AvatarSize));
+
+        ob_start();
+        imagepng($this->Resize($AvatarSize));
+        $content = ob_get_contents();
+        ob_end_clean();
+
+        return 'data:image/png;base64,' . base64_encode($content);
     }
 
     public function Save($Path, $AvatarSize = 0)
