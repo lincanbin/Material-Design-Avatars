@@ -78,10 +78,14 @@ $Avatar->Output2Browser();
 ```
 
 ```php
-<?
-//You can resize the ouput size again here.
+<?php
+// You can resize the ouput size again here.
 $OutputSize = 256;
 $Avatar->Output2Browser($OutputSize);
+// Output Base64 encoded image data.
+$Avatar->Output2Base64($OutputSize);
+// Get an image resource identifier.
+$Avatar->Output2ImageResource($OutputSize);
 ?>
 ```
 
