@@ -29,7 +29,7 @@ class MDAvatars
 
     function __construct($Char, $AvatarSize = 256)
     {
-        $this->Char            = strtoupper(mb_substr($Char, 0, 1, "UTF-8"));
+        $this->Char            = mb_strtoupper(mb_substr($Char, 0, 1, "UTF-8"));
         $this->AvatarSize      = $AvatarSize;
         $this->Padding         = 30 * ($this->AvatarSize / 256);
         $this->LetterFont      = dirname(__FILE__) . '/fonts/SourceCodePro-Light.ttf';
