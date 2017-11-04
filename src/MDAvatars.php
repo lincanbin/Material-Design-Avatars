@@ -428,11 +428,11 @@ class MDAvatars
     }
 
     /**
-     * Output binary image data
+     * Get image resource identifier
      * @param int $AvatarSize
      * @return resource
      */
-    public function Output2Binary($AvatarSize = 0)
+    public function Output2ImageResource($AvatarSize = 0)
     {
         if (!$AvatarSize) {
             $AvatarSize = $this->AvatarSize;
