@@ -427,6 +427,32 @@ class MDAvatars
         return imagepng($this->Resize($AvatarSize));
     }
 
+    /**
+     * Output binary image data
+     * @param int $AvatarSize
+     * @return resource
+     */
+    public function Output2Binary($AvatarSize = 0)
+    {
+        if (!$AvatarSize) {
+            $AvatarSize = $this->AvatarSize;
+        }
+        return $this->Resize($AvatarSize);
+    }
+
+    /**
+     * Output Base64 encoded image data
+     * @param int $AvatarSize
+     * @return string
+     */
+    public function Output2Base64($AvatarSize = 0)
+    {
+        if (!$AvatarSize) {
+            $AvatarSize = $this->AvatarSize;
+        }
+        return 'data:image/png;base64,' . base64_encode($this->Resize($AvatarSize));
+    }
+
     public function Save($Path, $AvatarSize = 0)
     {
         if (!$AvatarSize) {
